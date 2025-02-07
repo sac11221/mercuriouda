@@ -142,6 +142,21 @@
             <mxPoint x="500" y="831" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="CtdOX46LtKlbMSyHWcbX-86" value="MySQL" style="rounded=1;fillColor=#10739E;strokeColor=none;shadow=1;gradientColor=none;fontStyle=1;fontColor=#FFFFFF;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="990" y="731" width="200" height="64.5" as="geometry" />
+        </mxCell>
+        <mxCell id="CtdOX46LtKlbMSyHWcbX-87" value="CRUD" style="rounded=1;fillColor=#10739E;strokeColor=none;shadow=1;gradientColor=none;fontStyle=1;fontColor=#FFFFFF;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="990" y="821" width="200" height="64.5" as="geometry" />
+        </mxCell>
+        <mxCell id="CtdOX46LtKlbMSyHWcbX-88" value="PHP" style="rounded=1;fillColor=#10739E;strokeColor=none;shadow=1;gradientColor=none;fontStyle=1;fontColor=#FFFFFF;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="731" width="200" height="64.5" as="geometry" />
+        </mxCell>
+        <mxCell id="CtdOX46LtKlbMSyHWcbX-89" value="HTML/CSS" style="rounded=1;fillColor=#10739E;strokeColor=none;shadow=1;gradientColor=none;fontStyle=1;fontColor=#FFFFFF;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="731" width="200" height="64.5" as="geometry" />
+        </mxCell>
+        <mxCell id="CtdOX46LtKlbMSyHWcbX-90" value="Testing/Debugging" style="rounded=1;fillColor=#10739E;strokeColor=none;shadow=1;gradientColor=none;fontStyle=1;fontColor=#FFFFFF;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1670" y="731" width="200" height="64.5" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
