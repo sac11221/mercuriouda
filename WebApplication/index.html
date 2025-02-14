@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mercurio Eventi</title>
+		<style>
+			body, html {
+				margin: 0;
+				padding: 0;
+			}
+			
+			* {
+				box-sizing: border-box;
+			}
+			
+			a {
+				text-decoration: none;
+				color: darkred;
+			}
+			
+			a:hover {
+				text-decoration: underline;
+				color: darkblue;
+			}
+			
+			body {
+				display: flex;
+				min-height: 100vh;
+			}
+			
+			p {
+				font-size: 1.5em;
+			}
+			
+			.sidebar {
+				width: 20%;
+				margin: 10px 5px 10px 10px;
+				padding: 5px;
+				background-color: rgba(139, 0, 0, 0.3);
+			}
+			
+			#logo {
+				margin-bottom: 20px;
+				padding: 10px;
+			}
+			#logo img {
+				width: 100%;
+			}
+			#logo .title {
+				font-size: 2em;
+				width: 100%;
+				text-align: center;
+				margin-top: 5px;
+				color: darkred;
+				text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
+			}
+			
+			#link {
+				font-size: 1.5em;
+				margin-bottom: 25px;
+				padding: 5px;
+				text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+			}
+			
+			#login {
+				padding: 5px;
+			}
+			#login div {
+				font-size: 1.25em;
+			}
+			#login .title {
+				font-size: 1.5em;
+			}
+			#login input {
+				font-size: 1em;
+				width: 100%;
+			}
+			
+			.content {
+				width: 100%;
+				margin: 10px 5px 10px 5px;
+				padding: 10px;
+				background-color: rgba(139, 0, 0, 0.2);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="sidebar">
+			<section id="logo">
+				<img src="img/logo.png">
+				<div class="title"><a href=""><b>Mercurio Eventi</b></a></div>
+			</section>
+			<section id="link">
+				<a href="">Ultimi Eventi</a><br>
+				<a href="">Cerca Evento</a><br>
+				<a href="">Aggiungi Evento</a><br>
+			</section>
+			<section id="login">
+				<div class="title" style="margin-bottom: 5px;"><b>Account</b></div>
+				<div>Un account ti permette di aggiungere eventi al sito e di poter lasciare recensioni.</div><br>
+				<form>
+					<input type="text" name="username" placeholder="Username"><br>
+					<input type="password" name="password" placeholder="Password"><br>
+					<input type="submit" value="Log In">
+				</form><br>
+				<div style="font-size:1.25em;">Non hai un account? <a href="">Registrati</a>.</div>
+			</section>
+		</div>
+		<div class="content">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vulputate fringilla justo, eu euismod nulla accumsan sit amet. Nullam eget fermentum felis. Quisque id bibendum libero, quis auctor tortor. Nulla vel fringilla purus. In hac habitasse platea dictumst. Nunc felis mi, condimentum et libero eget, eleifend pulvinar lorem. Fusce vel erat ut neque malesuada rutrum. Sed convallis nisl velit, ac dignissim dolor egestas a. </p>
+		</div>
+	</body>
+</html>
