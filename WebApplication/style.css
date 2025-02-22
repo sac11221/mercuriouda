@@ -1,0 +1,90 @@
+body, html {
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--bg: rgba(128, 0, 0, 1);
+	--bg-sidebar: rgba(0, 0, 0, 0.35);
+	--bg-content: rgba(0, 0, 0, 0.5);
+	--a: rgba(255, 100, 100, 1);
+	--p: rgba(255, 200, 200, 1);
+}
+
+body {
+	background-color: var(--bg);
+}
+
+a {
+	text-decoration: none;
+	color: var(--a);
+}
+
+a:hover {
+	text-decoration: underline;
+	color: darkblue;
+}
+
+body {
+	display: flex;
+	min-height: 100vh;
+}
+
+p {
+	font-size: 1.5em;
+	color: var(--p);
+}
+
+.sidebar {
+	width: 20%;
+	margin: 10px 5px 10px 10px;
+	padding: 5px;
+	background-color: var(--bg-sidebar);
+}
+
+#logo {
+	margin-bottom: 20px;
+	padding: 10px;
+}
+#logo img {
+	width: 100%;
+}
+#logo .title {
+	font-size: 2em;
+	width: 100%;
+	text-align: center;
+	margin-top: 5px;
+	color: darkred;
+}
+
+#link {
+	font-size: 1.5em;
+	margin-bottom: 25px;
+	padding: 5px;
+}
+
+#login {
+	padding: 5px;
+}
+#login div {
+	font-size: 1.25em;
+	color: var(--p);
+}
+#login .title {
+	font-size: 1.5em;
+}
+#login input {
+	font-size: 1em;
+	width: 100%;
+}
+
+.content {
+	width: 100%;
+	margin: 10px 5px 10px 5px;
+	padding: 10px;
+	background-color: var(--bg-content);
+}
