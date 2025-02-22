@@ -12,6 +12,7 @@ body, html {
 	--bg-sidebar: rgba(0, 0, 0, 0.35);
 	--bg-content: rgba(0, 0, 0, 0.5);
 	--a: rgba(255, 100, 100, 1);
+	--a-hover: darkpurple;
 	--p: rgba(255, 200, 200, 1);
 }
 
@@ -26,7 +27,7 @@ a {
 
 a:hover {
 	text-decoration: underline;
-	color: darkblue;
+	color: var(--a-hover);
 }
 
 body {
@@ -46,6 +47,16 @@ p {
 	background-color: var(--bg-sidebar);
 }
 
+.sangue {
+	width: 50%;
+}
+.flipx {
+	transform: scaleX(-1);
+}
+.flipy {
+	transform: scaleY(-1);
+}
+
 #logo {
 	margin-bottom: 20px;
 	padding: 10px;
@@ -58,7 +69,6 @@ p {
 	width: 100%;
 	text-align: center;
 	margin-top: 5px;
-	color: darkred;
 }
 
 #link {
