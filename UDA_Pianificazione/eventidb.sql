@@ -1,7 +1,9 @@
 
 
 
-/**/
+--Username: mercurioevent
+--Password: swhkEtD6ZDy8
+
 
 CREATE TABLE CATEGORIA(
 	CodCategoria char(5) PRIMARY KEY,
