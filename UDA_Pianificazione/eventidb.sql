@@ -21,7 +21,7 @@ CREATE TABLE EVENTO(
 	TitoloEvento varchar(200),
 	DataEvento DATE,
 	Provincia char(2),
-	Descrizione varchar(250),
+	Descrizione varchar(2000),
 	Categoria char(5),
 	
 	FOREIGN KEY(Provincia) REFERENCES LUOGO(CodiceProvincia),
@@ -37,6 +37,12 @@ CREATE TABLE PARTECIPAZIONE(
 	PRIMARY KEY(ArtistaPartecipazione,EventoPartecipazione)
 );
 
+CREATE TABLE LUOGO(
+	CodiceProvincia char(2)	PRIMARY KEY,
+	ProvinciaEstesa varchar(50),
+	Regione varchar(50)
+);
+
 CREATE TABLE UTENTE(
 	Email varchar(100) PRIMARY KEY,
 	Password varchar(100),
@@ -45,7 +51,7 @@ CREATE TABLE UTENTE(
 	CognomeUtente varchar(100),
 	Residenza char(2),
 	
-	FOREIGN KEY Residenza REFERENCES LUOGO(CodiceProvincia)
+	FOREIGN KEY (Residenza) REFERENCES LUOGO(CodiceProvincia)
 );
 
 CREATE TABLE PREFERENZE( 
@@ -57,24 +63,19 @@ CREATE TABLE PREFERENZE(
 	PRIMARY KEY(UtentePreferenza,CategoriaPreferenza)
 );
 
-CREATE TABLE LUOGO(
-	CodiceProvincia char(2)	PRIMARY KEY,
-	ProvinciaEstesa varchar(50),
-	Regione varchar(50)
-);
+
 
 CREATE TABLE POST(
 	UtentePost varchar(100),
 	EventoPost int,
 	TitoloPost varchar(100),
 	DataPost TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-	Voto int,
-	Commento varchar(255),
-	
-	CHECK(Voto>0 and Voto<=5),
-	FOREIGN KEY(UtentePost) REFERENCES UTENTE(Email),
-	FOREIGN KEY(EventoPost) REFERENCES EVENTO(IdEvento),
-	PRIMARY KEY(UtentePost,EventoPost)
+	Voto int CHECK (Voto>0 and Voto<=5),
+	Commento varchar(2000),
+    
+	FOREIGN KEY (UtentePost) REFERENCES UTENTE(Email),
+	FOREIGN KEY (EventoPost) REFERENCES EVENTO(IdEvento),
+	PRIMARY KEY (UtentePost,EventoPost)
 );
 
 /*
@@ -103,7 +104,7 @@ VALUES("AG", "Agrigento", "Sicilia"),
 ("CL", "Caltanissetta", "Sicilia"),
 ("CB", "Campobasso", "Molise"),
 ("CI", "Carbonia-Iglesias", "Sardegna"),
-("CS", "Caserta", "Campania"),
+("CE", "Caserta", "Campania"),
 ("CT", "Catania", "Sicilia"),
 ("CZ", "Catanzaro", "Calabria"),
 ("CH", "Chieti", "Abruzzo"),
@@ -143,7 +144,6 @@ VALUES("AG", "Agrigento", "Sicilia"),
 ("NA", "Napoli", "Campania"),
 ("NO", "Novara", "Piemonte"),
 ("NU", "Nuoro", "Sardegna"),
-("OT", "Olbia-Tempio", "Sardegna"),
 ("OR", "Oristano", "Sardegna"),
 ("PD", "Padova", "Veneto"),
 ("PA", "Palermo", "Sicilia"),
@@ -163,6 +163,7 @@ VALUES("AG", "Agrigento", "Sicilia"),
 ("RC", "Reggio Calabria", "Calabria"),
 ("RE", "Reggio Emilia", "Emilia-Romagna"),
 ("RI", "Rieti", "Lazio"),
+("RN", "Rimini", "Emilia-Romagna"),
 ("RM", "Roma", "Lazio"),
 ("RO", "Rovigo", "Veneto"),
 ("SA", "Salerno", "Campania"),
@@ -171,12 +172,37 @@ VALUES("AG", "Agrigento", "Sicilia"),
 ("SI", "Siena", "Toscana"),
 ("SR", "Siracusa", "Sicilia"),
 ("SO", "Sondrio", "Lombardia"),
+("SU", "Sud Sardegna", "Sardegna"),
 ("TA", "Taranto", "Puglia"),
 ("TE", "Teramo", "Abruzzo"),
 ("TR", "Terni", "Umbria"),
 ("TO", "Torino", "Piemonte"),
 ("TP", "Trapani", "Sicilia"),
 ("TN", "Trento", "Trentino-Alto Adige/Südtirol"),
+("TV", "Treviso", "Veneto"),
+("TS", "Trieste", "Friuli Venezia Giulia"),
+("UD", "Udine", "Friuli Venezia Giulia"),
+("VA", "Varese", "Lombardia"),
+("VE", "Venezia", "Veneto"),
+("VB", "Verbano Cusio Ossola", "Piemonte"),
+("VC", "Vercelli", "Piemonte"),
+("VR", "Verona", "Veneto"),
 ("VV", "Vibo Valentia", "Calabria"),
 ("VI", "Vicenza", "Veneto"),
 ("VT", "Viterbo", "Lazio");
+
+INSERT INTO CATEGORIA(CodCategoria,NomeCategoria)
+VALUES ("CA001","Concerto"),
+("CA002","Sagra"),
+("CA003","Teatro"),
+("CA004","Cinema"),
+("CA005","Danza"),
+("CA006","Gastronomia"),
+("CA007","Sportivo"),
+("CA008","Moda"),
+("CA009","Cultura Pop"),
+("CA010","Motori"),
+("CA011","Esposizione storica"),
+("CA012","Esposizione artistica"),
+("CA013","Politico"),
+("CA014","Beneficenza");
