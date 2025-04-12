@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0" version="26.2.10">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:137.0) Gecko/20100101 Firefox/137.0" version="26.2.12">
   <diagram name="Pagina-1" id="BPavdeduB72e0fLUwRKr">
-    <mxGraphModel dx="2597" dy="759" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="2043" dy="460" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -261,7 +261,7 @@
         <mxCell id="Yd3ec5MEqcawKA09kIlU-71" value="1,N" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="370" y="357.5" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Yd3ec5MEqcawKA09kIlU-72" value="??" style="rhombus;whiteSpace=wrap;html=1;fontSize=10;" parent="1" vertex="1">
+        <mxCell id="Yd3ec5MEqcawKA09kIlU-72" value="Categorizzazione" style="rhombus;whiteSpace=wrap;html=1;fontSize=10;" parent="1" vertex="1">
           <mxGeometry x="372" y="255" width="115" height="35" as="geometry" />
         </mxCell>
         <mxCell id="Yd3ec5MEqcawKA09kIlU-73" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.098;entryY=-0.007;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="Yd3ec5MEqcawKA09kIlU-72" target="Yd3ec5MEqcawKA09kIlU-3" edge="1">
@@ -323,7 +323,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="Yd3ec5MEqcawKA09kIlU-86" value="0,N" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="765" y="140" width="60" height="30" as="geometry" />
+          <mxGeometry x="740" y="170" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="Yd3ec5MEqcawKA09kIlU-87" value="1,1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="780" y="320" width="60" height="30" as="geometry" />
@@ -475,7 +475,7 @@
         <mxCell id="8mOL9f4rSlKWJENNrVKu-31" value="0,N" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="565" y="540" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="938fc45sM32lBM4DSNiJ-1" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Regole di lettura&lt;/h1&gt;&lt;div&gt;Un artista può partecipare a più eventi.&lt;/div&gt;&lt;div&gt;Ad un evento deve partecipare almeno un artista.&lt;/div&gt;&lt;p&gt;Ogni evento è ?? da una categoria.&lt;br&gt;Una categorià può ?? un evento.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+        <mxCell id="938fc45sM32lBM4DSNiJ-1" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Regole di lettura&lt;/h1&gt;&lt;div&gt;Un artista può partecipare a più eventi.&lt;/div&gt;&lt;div&gt;Ad un evento deve partecipare almeno un artista.&lt;/div&gt;&lt;p&gt;Ogni evento è categorizzato da una categoria.&lt;br&gt;Una categorià può categorizzare più eventi.&lt;/p&gt;&lt;p&gt;Un evento è situato in un luogo.&lt;br&gt;Per ogni luogo potrebbero esserci situati più eventi.&lt;/p&gt;&lt;p&gt;Ogni categoria può essere preferita da più utenti.&lt;br&gt;Un utente può preferire più categorie.&lt;/p&gt;&lt;p&gt;Un utente è residente in un luogo.&lt;br&gt;Ogni luogo può avere più utenti residenti.&lt;/p&gt;&lt;p&gt;Un evento può essere recensito da più post.&lt;br&gt;Un post recensisce un evento.&lt;/p&gt;&lt;p&gt;Un utente può pubblicare più post.&lt;br&gt;Un post viene pubblicato da un utente.&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-660" y="547.5" width="630" height="362.5" as="geometry" />
         </mxCell>
         <mxCell id="938fc45sM32lBM4DSNiJ-4" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;Vincoli di integrità referenziale&lt;/font&gt;&lt;/h1&gt;&lt;div&gt;&lt;div&gt;- PARTECIPAZIONE(ArtistaPartecipaazione) ⊆ ARTISTA(NomeArte)&lt;/div&gt;&lt;/div&gt;&lt;div&gt;- PARTECIPAZIONE(EventoPartecipazione) ⊆ EVENTO(IdEvento)&lt;/div&gt;&lt;div&gt;- UTENTE(Residenza) ⊆ LUOGO(CodiceProvincia)&lt;/div&gt;&lt;div&gt;- PREFERENZA(UtentePreferenza) ⊆ UTENTE(Email)&lt;/div&gt;&lt;div&gt;- PREFERENZA(CategoriaPreferenza) ⊆ CATEGORIA(CodCategoria)&lt;/div&gt;&lt;div&gt;- EVENTO(Provincia) ⊆&amp;nbsp; LUOGO(CodiceProvincia)&lt;/div&gt;&lt;div&gt;- EVENTO(Categoria) ⊆ CATEGORIA(CodCategoria)&lt;/div&gt;&lt;div&gt;- POST(Utente) ⊆ UTENTE(Email)&lt;/div&gt;&lt;div&gt;- POST(Evento) ⊆ EVENTO(IdEvento)&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
