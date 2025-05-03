@@ -20,11 +20,11 @@ CREATE TABLE EVENTO(
 	IdEvento int auto_increment PRIMARY KEY,
 	TitoloEvento varchar(200),
 	DataEvento DATE,
-	Provincia char(2),
+	Luogo int,
 	Descrizione varchar(2000),
 	Categoria char(5),
 	
-	FOREIGN KEY(Provincia) REFERENCES LUOGO(IdLuogo),
+	FOREIGN KEY(Luogo) REFERENCES LUOGO(IdLuogo),
 	FOREIGN KEY(Categoria) REFERENCES CATEGORIA(CodCategoria)
 );
 
@@ -45,8 +45,8 @@ CREATE TABLE LUOGO(
 );
 
 CREATE TABLE UTENTE(
-	CodiceUtente varchar(10), 
-	Email varchar(100) PRIMARY KEY,
+	IdUtente int auto_increment PRIMARY KEY, 
+	Email varchar(100),
 	Password varchar(100),
 	Username varchar(100) unique,
 	NomeUtente varchar(100),
@@ -56,10 +56,10 @@ CREATE TABLE UTENTE(
 );
 
 CREATE TABLE PREFERENZE( 
-	UtentePreferenza varchar(100),
+	UtentePreferenza int,
 	CategoriaPreferenza char(5),
 	
-	FOREIGN KEY(UtentePreferenza) REFERENCES UTENTE(CodiceUtente),
+	FOREIGN KEY(UtentePreferenza) REFERENCES UTENTE(IdUtente),
 	FOREIGN KEY(CategoriaPreferenza) REFERENCES CATEGORIA(CodCategoria),
 	PRIMARY KEY(UtentePreferenza,CategoriaPreferenza)
 );
@@ -67,14 +67,14 @@ CREATE TABLE PREFERENZE(
 
 
 CREATE TABLE POST(
-	UtentePost varchar(100),
+	UtentePost int,
 	EventoPost int,
 	TitoloPost varchar(100),
 	DataPost TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	Voto int CHECK (Voto>0 and Voto<=5),
 	Commento varchar(2000),
     
-	FOREIGN KEY (UtentePost) REFERENCES UTENTE(CodiceUtente),
+	FOREIGN KEY (UtentePost) REFERENCES UTENTE(IdUtente),
 	FOREIGN KEY (EventoPost) REFERENCES EVENTO(IdEvento),
 	PRIMARY KEY (UtentePost,EventoPost)
 );
