@@ -59,7 +59,7 @@ CREATE TABLE PREFERENZE(
 	UtentePreferenza varchar(100),
 	CategoriaPreferenza char(5),
 	
-	FOREIGN KEY(UtentePreferenza) REFERENCES UTENTE(Email),
+	FOREIGN KEY(UtentePreferenza) REFERENCES UTENTE(CodiceUtente),
 	FOREIGN KEY(CategoriaPreferenza) REFERENCES CATEGORIA(CodCategoria),
 	PRIMARY KEY(UtentePreferenza,CategoriaPreferenza)
 );
@@ -74,7 +74,7 @@ CREATE TABLE POST(
 	Voto int CHECK (Voto>0 and Voto<=5),
 	Commento varchar(2000),
     
-	FOREIGN KEY (UtentePost) REFERENCES UTENTE(Email),
+	FOREIGN KEY (UtentePost) REFERENCES UTENTE(CodiceUtente),
 	FOREIGN KEY (EventoPost) REFERENCES EVENTO(IdEvento),
 	PRIMARY KEY (UtentePost,EventoPost)
 );
