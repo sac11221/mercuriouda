@@ -451,30 +451,6 @@
         <mxCell id="8mOL9f4rSlKWJENNrVKu-24" value="1,1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="475" y="415" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="8mOL9f4rSlKWJENNrVKu-25" value="Residenza" style="rhombus;whiteSpace=wrap;html=1;fontSize=10;" parent="1" vertex="1">
-          <mxGeometry x="860" y="547.5" width="110" height="35" as="geometry" />
-        </mxCell>
-        <mxCell id="8mOL9f4rSlKWJENNrVKu-26" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1.008;entryY=0.084;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="8mOL9f4rSlKWJENNrVKu-25" target="Yd3ec5MEqcawKA09kIlU-20" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="800" y="260" as="sourcePoint" />
-            <mxPoint x="820" y="110" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="915" y="141" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="8mOL9f4rSlKWJENNrVKu-28" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="8mOL9f4rSlKWJENNrVKu-25" target="8mOL9f4rSlKWJENNrVKu-2" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="655" y="526.5" as="sourcePoint" />
-            <mxPoint x="655" y="603.5" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="8mOL9f4rSlKWJENNrVKu-30" value="1,1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="750" y="110" width="60" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="8mOL9f4rSlKWJENNrVKu-31" value="0,N" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="565" y="540" width="60" height="30" as="geometry" />
-        </mxCell>
         <mxCell id="938fc45sM32lBM4DSNiJ-1" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Regole di lettura&lt;/h1&gt;&lt;div&gt;Un artista può partecipare a più eventi.&lt;/div&gt;&lt;div&gt;Ad un evento deve partecipare almeno un artista.&lt;/div&gt;&lt;p&gt;Ogni evento è categorizzato da una categoria.&lt;br&gt;Una categorià può categorizzare più eventi.&lt;/p&gt;&lt;p&gt;Un evento è situato in un luogo.&lt;br&gt;Per ogni luogo potrebbero esserci situati più eventi.&lt;/p&gt;&lt;p&gt;Ogni categoria può essere preferita da più utenti.&lt;br&gt;Un utente può preferire più categorie.&lt;/p&gt;&lt;p&gt;Un utente è residente in un luogo.&lt;br&gt;Ogni luogo può avere più utenti residenti.&lt;/p&gt;&lt;p&gt;Un evento può essere recensito da più post.&lt;br&gt;Un post recensisce un evento.&lt;/p&gt;&lt;p&gt;Un utente può pubblicare più post.&lt;br&gt;Un post viene pubblicato da un utente.&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-660" y="547.5" width="630" height="362.5" as="geometry" />
         </mxCell>
