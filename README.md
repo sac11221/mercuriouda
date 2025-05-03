@@ -1,9 +1,9 @@
 # big uda
 
 ### credenziali google 
-mercuriouda@gmail.com
-apolloundici
+- mercuriouda@gmail.com
+- password: apolloundici
 
 ### credenziali altervista
-mercurioevent
-swhkEtD6ZDy8
+- mercurioevent
+- password: swhkEtD6ZDy8
