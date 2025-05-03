@@ -24,7 +24,7 @@ CREATE TABLE EVENTO(
 	Descrizione varchar(2000),
 	Categoria char(5),
 	
-	FOREIGN KEY(Provincia) REFERENCES LUOGO(CodiceProvincia),
+	FOREIGN KEY(Provincia) REFERENCES LUOGO(IdLuogo),
 	FOREIGN KEY(Categoria) REFERENCES CATEGORIA(CodCategoria)
 );
 
@@ -38,20 +38,21 @@ CREATE TABLE PARTECIPAZIONE(
 );
 
 CREATE TABLE LUOGO(
-	CodiceProvincia char(2)	PRIMARY KEY,
+	IdLuogo int auto_increment PRIMARY KEY,
+	NomeLuogo varchar(100),
 	ProvinciaEstesa varchar(50),
 	Regione varchar(50)
 );
 
 CREATE TABLE UTENTE(
+	CodiceUtente varchar(10), 
 	Email varchar(100) PRIMARY KEY,
 	Password varchar(100),
 	Username varchar(100) unique,
 	NomeUtente varchar(100),
 	CognomeUtente varchar(100),
-	Residenza char(2),
+	Provincia varchar(50),
 	
-	FOREIGN KEY (Residenza) REFERENCES LUOGO(CodiceProvincia)
 );
 
 CREATE TABLE PREFERENZE( 
