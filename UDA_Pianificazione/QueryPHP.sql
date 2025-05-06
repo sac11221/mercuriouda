@@ -2,6 +2,11 @@
 insert into UTENTE (Email, Password, Username, NomeUtente, CognomeUtente, Provincia)
 VALUES (?,?,?,?,?);
 
+select Password 
+FROM UTENTE
+WHERE Username = ?;
+
+
 -- login  utente 
 select *
 from UTENTE
