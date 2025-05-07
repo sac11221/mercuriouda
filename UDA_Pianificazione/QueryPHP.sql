@@ -23,7 +23,9 @@ where U.Username = ? ;
 insert into PREFERENZE(UtentePreferenza, CategoriaPreferenza)
 values (?,?);
 
--- selezione dell'evento 
+-- selezione dell'evento luogo
 select * 
 from EVENTO
-where TitoloEvento = ? and DataEvento = ? and Luogo = ?;
+where Luogo = ?;
+
+--selezione dell'evento per data 
